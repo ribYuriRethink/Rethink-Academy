@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { router as livros } from "./livros";
+import { router as books } from "./books";
 
 const router = Router();
 
-router.use("/livros", livros);
+router.use("/livros", books);
 
 export { router };

@@ -3,12 +3,12 @@ import config from "../../knexfile";
 
 const knexInstance = knex(config);
 
-const show = async (column: string, autor: string) => {
+const show = async (column: string, value: string) => {
   try {
     const obj = {
-      [column]: autor,
+      [column]: value,
     };
-    const result: any = await knexInstance("livros").select("*").where(obj);
+    const result: any = await knexInstance("books").select("*").where(obj);
     return result;
   } catch (error: any) {
     console.log(error.message);

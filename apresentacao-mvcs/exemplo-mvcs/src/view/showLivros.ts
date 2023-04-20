@@ -1,12 +1,12 @@
 import { Response } from "express";
 
-type Livro = {
-  titulo: string;
+type Book = {
+  title: string;
   isbn: string;
 };
 
-const showLivro = (res: Response, livros: Livro[]) => {
-  res.send(livros);
+const showLivro = (res: Response, books: Book[]) => {
+  res.send(books);
 };
 
 export default { showLivro };

@@ -4,16 +4,16 @@ import config from "./knexfile";
 const knexInstace = knex(config);
 
 const data = [
-  { autor: "Valente", titulo: "Engenharia de Software Moderna", isbn: "1" },
-  { autor: "Julio Verne", titulo: "Viagem ao centro da Terra", isbn: "2" },
-  { autor: "JK Rolling", titulo: "Harry Potter", isbn: "2" },
-  { autor: "Tolkien", titulo: "Senhor dos Anéis", isbn: "4" },
-  { autor: "Tolkien", titulo: "O Hobbit", isbn: "4" },
+  { author: "Valente", title: "Engenharia de Software Moderna", isbn: "1" },
+  { author: "Julio Verne", title: "Viagem ao centro da Terra", isbn: "2" },
+  { author: "JK Rolling", title: "Harry Potter", isbn: "2" },
+  { author: "Tolkien", title: "Senhor dos Anéis", isbn: "4" },
+  { author: "Tolkien", title: "O Hobbit", isbn: "4" },
 ];
 
 const insertOnLivros = async (data: any[]) => {
-  await knexInstace("livros").insert(data);
-  console.log("Livros success!");
+  await knexInstace("books").insert(data);
+  console.log("Books success!");
 };
 
 insertOnLivros(data)
